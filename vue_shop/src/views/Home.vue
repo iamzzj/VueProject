@@ -7,7 +7,7 @@
           src="../assets/logo.png"
           alt=""
         >
-        <span>电商后台关机系统</span>
+        <span>电商后台管理系统</span>
       </div>
       <el-button
         type="info"
