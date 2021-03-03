@@ -47,9 +47,11 @@
       "parser": "babel-eslint"
     },
     "rules": {
+      "eslint-disable-next-line": 0,
       "indent": [
         "off",
-        2
+        2,
+        4
       ]
     }
   },
