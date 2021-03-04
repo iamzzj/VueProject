@@ -7,6 +7,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import './assets/fonts/iconfont.css'
 import './assets/css/global.css'
 import axios from 'axios'
+import TreeTable from 'vue-table-with-tree-grid'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
@@ -19,6 +20,8 @@ axios.interceptors.request.use(config => {
   return config
 })
 Vue.prototype.$http = axios
+
+Vue.component('tree-table', TreeTable)
 
 new Vue({
   router,
