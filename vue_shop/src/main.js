@@ -14,7 +14,7 @@ Vue.use(ElementUI)
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
 
-axios.defaults.baseURL = 'http://localhost:8888/api/private/v1'
+axios.defaults.baseURL = 'http://192.168.0.7:8888/api/private/v1'
 axios.interceptors.request.use(config => {
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config
