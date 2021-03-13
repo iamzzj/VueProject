@@ -115,7 +115,6 @@
     align-items: center;
     color: white;
     font-size: 20px;
-    position: relative;
 
     div {
       display: flex;
@@ -135,11 +134,6 @@
 
   .el-aside {
     background-color: $container-aside;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 60px;
-    bottom: 0;
 
     .el-menu {
       border-right: none;
@@ -148,12 +142,6 @@
 
   .el-main {
     background-color: $container-main;
-    position: absolute;
-    left: 200px;
-    right: 0;
-    top: 60px;
-    bottom: 0;
-    overflow-y: scroll;
   }
 
   .iconfont {
