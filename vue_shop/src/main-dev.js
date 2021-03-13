@@ -16,14 +16,25 @@ import 'quill/dist/quill.core.css' // import styles
 import 'quill/dist/quill.snow.css' // for snow theme
 import 'quill/dist/quill.bubble.css' // for bubble theme
 
+// 请求进度条
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
 
 axios.defaults.baseURL = 'http://localhost:8888/api/private/v1'
+// request展示进度条
 axios.interceptors.request.use(config => {
+  NProgress.start()
   config.headers.Authorization = window.sessionStorage.getItem('token')
+  return config
+})
+// response中隐藏进度条
+axios.interceptors.response.use(config => {
+  NProgress.done()
   return config
 })
 Vue.prototype.$http = axios
