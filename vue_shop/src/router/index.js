@@ -50,6 +50,16 @@ const routes = [
         path: '/params',
         name: 'Params',
         component: () => import('../components/goods/Params')
+      },
+      {
+        path: '/goods',
+        name: 'Goods',
+        component: () => import('../components/goods/List')
+      },
+      {
+        path: '/goods/add',
+        name: 'Add',
+        component: () => import('../components/goods/Add')
       }
     ]
   }
